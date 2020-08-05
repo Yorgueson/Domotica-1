@@ -61,7 +61,7 @@
 
                     </div>
 
-                    <a href="#" class="small-box-footer" onclick="gas();">Mas informacion <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer" onclick="gas();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickGas"></i></a>
 
                 </div>
 
@@ -263,8 +263,6 @@
       </div>
 
     </section>
-
-</div>
   <!-- /.content-wrapper -->
 
   <!--  ================================================================

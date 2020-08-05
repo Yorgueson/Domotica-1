@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  document.getElementById('clickGas').click();
+});
+
           /*=============================================
        =            GRAFICA DEL AGUA           =
        =============================================*/
@@ -54,7 +58,7 @@
                 tickColor: '#fff'
               },
               series: {
-                color: '#3c8dbc',
+                color: '#42B9FF',
                 lines: {
                   lineWidth: 2,
                   show: true,
@@ -267,7 +271,7 @@
                 tickColor: '#f3f3f3'
               },
               series: {
-                color: '#E60D09',
+                color: '#FF0C08',
                 lines: {
                   lineWidth: 2,
                   show: true,
