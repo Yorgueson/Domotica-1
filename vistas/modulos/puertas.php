@@ -59,57 +59,26 @@
               <div class="card-body" style="background: #6c757d; color:#fff;">
 
                   <section class="content">
-                    <div class="container-fluid ">
+                    <div class="container-fluid">
                       <!-- Small boxes (Stat box) -->
                       <div class="row">
-                        <div class="col-lg-3 col-lg-4">
+                        <div class="col-lg-3 col-6">
                           <!-- small box -->
-                          <div class="small-box bg-success disabled color-palette">
+                          <div class="small-box bg-info">
                             <div class="inner">
-                              <h3>5</h3>
-                              <p>Numero de puertas </p>
+                              <h3>150</h3>
+
+                              <p>New Orders</p>
                             </div>
                             <div class="icon">
-                              <i class="ion ion-plus-circled"></i>
+                              <i class="ion ion-bag"></i>
                             </div>
-                            <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modalAgregarPuerta">Agregar puerta <i class="fas fa-arrow-circle-right"></i></a>
-                          </div>
-                        </div>
-
-                        <div class="col-lg-3 col-lg-4">
-                          <!-- small box -->
-                          <div class="small-box bg-warning disabled color-palette">
-                            <div class="inner">
-                              <h3>Estadisticas</h3>
-
-                              <p>Muestra estadisticas de puertas</p>
-                            </div>
-                            <div class="icon">
-                              <i class="ion ion-arrow-graph-up-right"></i>
-                            </div>
-                            <a href="#" class="small-box-footer" data-toggle="modal" data-target="#estadisticas" >Consultar <i class="fas fa-arrow-circle-right"></i></a>
-                          </div>
-                        </div>
-
-                        <div class="col-lg-3 col-lg-4">
-                          <!-- small box -->
-                          <div class="small-box bg-danger disabled color-palette">
-                            <div class="inner">
-                              <h3>Historial</h3>
-
-                              <p>Muestra historial de puertas</p>
-                            </div>
-                            <div class="icon">
-                              <i class="ion ion-ios-book"></i>
-                            </div>
-                            <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modalHistorialPuerta">Ver  <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
                         </div>
                       
                       </div>
                     </div>
-
-
                   </section>
         
                   <!-- Ver Puerta -->

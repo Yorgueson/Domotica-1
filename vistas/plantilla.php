@@ -152,7 +152,7 @@
       
       if ($_GET["ruta"]=="inicio" ||
           $_GET["ruta"]=="iluminacion" ||
-          $_GET["ruta"]=="puerta" ||
+          $_GET["ruta"]=="puertas" ||
           $_GET["ruta"]=="salir") {
         
         include "modulos/".$_GET["ruta"].".php";
