@@ -1,14 +1,23 @@
+<?php 
+
+  session_start();
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
+  
   <meta charset="utf-8">
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Domotica ADSI</title>
+
+  <title><?php echo $_GET["vista"]; ?></title>
+
+  <link rel="icon" href="images/icons/casa.png">
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="icon" href="vistas/img/plantilla/icono.jpg">
 
   <!--================================
     PLUGINS DE CSS
@@ -116,80 +125,78 @@
 <!-- date-range-picker -->
 <script src="vistas/plugins/daterangepicker/daterangepicker.js"></script>
 
-  
+
+
+
+
 </head>
 
-<!--================================
-    CUERPO DEL DOCUMENTO
-  =================================-->
-
-<body class="hold-transition sidebar-mini sidebar-collapse">
-
+<body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 
 
-<?php
+<?php 
 
-    echo '<div class="wrapper">';
+if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
+  
+  
+  echo '<div class="wrapper">';
 
-    /*==============================
-    CABEZOTE
-    =============================*/
+     /*=============================================
+     =            CABEZOTE            =
+     =============================================*/
+        include "vistas/modulos/cabezote.php";
 
-    include "modulos/cabezote.php";
+     /*=============================================
+     =            MENU           =
+     =============================================*/
+        include "vistas/modulos/menu.php";
 
-    /*==============================
-    MENU LATERAL
-    =============================*/
+     /*=============================================
+     =            CONTENIDO            =
+     =============================================*/
+        if (isset($_GET["vista"])) {
 
-    include "modulos/menu.php";
+            if ($_GET["vista"] == "inicio"||
+                $_GET["vista"] == "usuarios"||
+                $_GET["vista"] == "serviciosPublicos"||
+                $_GET["vista"] == "temperatura"||
+                $_GET["vista"] == "puertas"||
+                $_GET["vista"] == "ventanas"||
+                $_GET["vista"] == "salir"||
+                $_GET["vista"] == "iluminacion") {
+              
+              include 'vistas/modulos/'.$_GET["vista"].'.php';
 
-    /*==============================
-    INICIO
-    =============================*/
 
-    if (isset($_GET["ruta"])) {
-      
-      if ($_GET["ruta"]=="inicio" ||
-          $_GET["ruta"]=="iluminacion" ||
-          $_GET["ruta"]=="puerta" ||
-          $_GET["ruta"]=="salir") {
-        
-        include "modulos/".$_GET["ruta"].".php";
+            }else{
 
-      } else {
+              include 'vistas/modulos/404.php';
+            }
+        }
 
-        include "modulos/404.php";
 
-      }
+     /*=============================================
+     =            FOOTER           =
+     =============================================*/
+        include "vistas/modulos/footer.php";
 
-    } else {
+  echo '</div>';
 
-        include "modulos/inicio.php";
+}else{
 
-      }
+  include "vistas/modulos/login.php";
 
-    /*==============================
-    FOOTER
-    =============================*/
+}
 
-    include "modulos/footer.php";
-
-    echo '</div>';
 
 ?>
 
-<!-- ./wrapper -->
-
-<script src="vistas/js/plantilla.js"></script>
-<script src="vistas/dist/js/reportes.js"></script>
-<!-- ./wrapper -->
 
 
-
-
-
+<script src="./vistas/js/puertas.js"></script>
+<script src="./vistas/js/usuario.js"></script>
+<!-- <script src="./vistas/js/serviciosP.js"></script> -->
 
 </body>
-
 </html>

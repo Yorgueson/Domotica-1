@@ -7,7 +7,7 @@
 	require_once "./controlador/inicioControlador.php";
 	require_once "./controlador/ventanasControlador.php";
 	require_once "./controlador/serviciosPublicosControlador.php";
-	require_once "./controlador/puertaControlador.php";
+	require_once "./controlador/puertas.controlador.php";
 	require_once "./controlador/temperaturaControlador.php";
 	require_once "./controlador/ventanasControlador.php";
 	require_once "./controlador/usuarioControlador.php";

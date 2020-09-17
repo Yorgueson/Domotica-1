@@ -45,11 +45,11 @@
 
             $stmt -> bindparam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 
-         	$stmt -> bindparam(":usuario", $datos["usuario"], PDO::PARAM_STR);
+         	  $stmt -> bindparam(":usuario", $datos["usuario"], PDO::PARAM_STR);
 
-         	$stmt -> bindparam(":password", $datos["password"], PDO::PARAM_STR);
+         	  $stmt -> bindparam(":password", $datos["password"], PDO::PARAM_STR);
 
-         	$stmt -> bindparam(":perfil", $datos["perfil"], PDO::PARAM_STR);
+         	  $stmt -> bindparam(":perfil", $datos["perfil"], PDO::PARAM_STR);
 
             $stmt -> bindparam(":foto", $datos["foto"], PDO::PARAM_STR);
 
@@ -84,23 +84,23 @@
 
          	$stmt -> bindparam(":perfil", $datos["perfil"], PDO::PARAM_STR);
 
-            $stmt -> bindparam(":foto", $datos["foto"], PDO::PARAM_STR);
+          $stmt -> bindparam(":foto", $datos["foto"], PDO::PARAM_STR);
 
-            if($stmt -> execute()){
+          if($stmt -> execute()){
 
-                return "ok";
+              return "ok";
 
-            }else{
+          }else{
 
-                return "error";
+              return "error";
 
-            }
+          }
 
-            $stmt -> close();
+          $stmt -> close();
 
-            $stmt = null;
+          $stmt = null;
 
-       	}
+      }
 
         /*=============================================
         =            ACTUALIZAR USUARIO           =
