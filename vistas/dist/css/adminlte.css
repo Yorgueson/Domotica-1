@@ -3662,8 +3662,8 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #ffffff;
-  border-color: #007bff;
-  background-color: #007bff;
+  border-color: #ff1100;
+  background-color: #ff2600;
   box-shadow: none;
 }
 
@@ -13772,7 +13772,7 @@ textarea.form-control.is-warning {
 }
 
 .custom-switch.custom-switch-off-primary .custom-control-input ~ .custom-control-label::after {
-  background: #003e80;
+  background: #ff0000;
 }
 
 .custom-switch.custom-switch-on-primary .custom-control-input:checked ~ .custom-control-label::before {
@@ -30707,5 +30707,11 @@ a.text-muted:hover {
 
 [class*="accent-"] a.btn-dark {
   color: #ffffff;
+}
+.buttonFondo{
+  background-color: #343a40;
+}
+.buttonFondoModal{
+  background-color: #790a0a;
 }
 /*# sourceMappingURL=adminlte.css.map */
