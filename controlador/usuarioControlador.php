@@ -413,7 +413,6 @@
 
 				            if($respuesta == "ok"){
 
-<<<<<<< HEAD
 				            			$color="tituloWhite";
 
 					                        echo "<script>
@@ -426,18 +425,6 @@
 					                                          confirmButtonColor: '#28a745',
 					                                          confirmButtonText: 'Ok',
 					                                          closeOnConfirm: false 
-=======
-		                        echo "<script>
-		                                      Swal.fire({
-
-		                                          type: 'success',
-		                                          title: '¡El usuario se ingreso correctamente!',
-		                                          background: '#343a40',
-		                                          showConfirmButton: true,
-		                                          confirmButtonColor: '#28a745',
-		                                          confirmButtonText: 'Ok',
-		                                          closeOnConfirm: false 
->>>>>>> 34cfd9de56dff6255efa2a5d0dd3d903404688b3
 
 		                                          }).then((result)=>{
 
