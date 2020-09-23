@@ -17,6 +17,7 @@
 
 			$respuesta = usuariosControlador::ctrMostrarUsuario($item, $valor);
 
+echo '<pre>'; print_r($respuesta); echo '</pre>';
 			echo json_encode($respuesta);
 
 
