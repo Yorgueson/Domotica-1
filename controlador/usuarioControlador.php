@@ -286,18 +286,6 @@
 		}
 
 		/* ================================================================
-        		en este metodo puede consultar cualquier tabla de la BD
-        ================================================================= */
-		static public function ctrMostrarTabla($tabla,$item,$valor){
-
-			$respuesta = usuarioModelo::mdlMostrarUsuario($tabla, $item, $valor);
-
-			return $respuesta;
-		
-		}
-
-
-		/* ================================================================
         		EDITAR USUARIOS
         ================================================================= */
 		static public function ctrEditarUsuario(){
@@ -414,11 +402,6 @@
 						if (empty($encriptar)) {
 							$encriptar = $_POST['passwordActual'];
 						}
-	                    }else {
-				
-							$encriptar = $_POST['passwordActual'];
-
-						}						
 
 							$datos = array("nombre" => $_POST["editarNombre"],
 				                    		"usuario" => $_POST["editarUsuario"],
