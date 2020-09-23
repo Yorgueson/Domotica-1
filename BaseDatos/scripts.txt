@@ -22,6 +22,7 @@
 	  (5, 'oscar', '25c°', '25%', '25%');
 	/*!40000 ALTER TABLE `temp_habitaciones` ENABLE KEYS */;
 
+<<<<<<< HEAD
 # script de la tabla de ventanas
 
 -- Volcando estructura para tabla pos.registro_ventana_abierta
@@ -96,3 +97,23 @@ INSERT INTO `ventana` (`id`, `referencia`, `ubicacion`, `usuario_permitidos`, `d
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+=======
+
+	#script de la tabla iluminacion
+	-- Volcando estructura para tabla domotica.iluminacion
+	CREATE TABLE IF NOT EXISTS `iluminacion` (
+ 	 `id_bombillo` int(11) NOT NULL AUTO_INCREMENT,
+ 	 `nombre` varchar(50) DEFAULT NULL,
+  	`encendido` int(11) DEFAULT NULL,
+ 	 `color` varchar(50) DEFAULT NULL,
+ 	 `intensidad` int(11) DEFAULT NULL,
+ 	 `estado` int(11) DEFAULT NULL,
+ 	 PRIMARY KEY (`id_bombillo`)
+	) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+	-- Volcando datos para la tabla domotica.iluminacion: ~1 rows (aproximadamente)
+	/*!40000 ALTER TABLE `iluminacion` DISABLE KEYS */;
+	INSERT INTO `iluminacion` (`id_bombillo`, `nombre`, `encendido`, `color`, `intensidad`, `estado`) VALUES
+	(3, 'habitacion mia', 1, '#c41717', 9, 0);
+	/*!40000 ALTER TABLE `iluminacion` ENABLE KEYS */;
+>>>>>>> iluminacion
