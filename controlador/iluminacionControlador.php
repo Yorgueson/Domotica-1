@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class ControladorIluminacion{
 
@@ -200,3 +200,4 @@ class ControladorIluminacion{
     }
 
 }
+

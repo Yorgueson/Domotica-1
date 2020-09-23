@@ -1014,6 +1014,13 @@ pre code {
   }
 }
 
+<<<<<<< HEAD
+=======
+#infoGas, #infoAgua, #infoEnergia{
+  display: none;
+}
+
+>>>>>>> servicios
 @media (min-width: 768px) {
   .col-md {
     -ms-flex-preferred-size: 0;
@@ -3662,8 +3669,13 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #ffffff;
+<<<<<<< HEAD
   border-color: #ff1100;
   background-color: #ff2600;
+=======
+  border-color: #007bff;
+  background-color: #007bff;
+>>>>>>> servicios
   box-shadow: none;
 }
 
@@ -6619,6 +6631,10 @@ button.bg-info:focus {
   background-color: #ffc107 !important;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> servicios
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
 button.bg-warning:focus {
@@ -13772,7 +13788,11 @@ textarea.form-control.is-warning {
 }
 
 .custom-switch.custom-switch-off-primary .custom-control-input ~ .custom-control-label::after {
+<<<<<<< HEAD
   background: #ff0000;
+=======
+  background: #003e80;
+>>>>>>> servicios
 }
 
 .custom-switch.custom-switch-on-primary .custom-control-input:checked ~ .custom-control-label::before {
@@ -20027,6 +20047,7 @@ html.maximized-card {
 
 .login-logo a,
 .register-logo a {
+<<<<<<< HEAD
   color: #495057;
 }
 
@@ -20043,6 +20064,26 @@ html.maximized-card {
   height: 100vh;
   -ms-flex-pack: center;
   justify-content: center;
+=======
+  color: #495057 !important;
+}
+
+
+
+.login-page,
+.register-page {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  background:url(./../../../images/fondos/sala.jpg)!important;
+  background-size: cover !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+  height: 100vh !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+>>>>>>> servicios
 }
 
 .login-box,
@@ -20060,12 +20101,21 @@ html.maximized-card {
 
 .login-card-body,
 .register-card-body {
+<<<<<<< HEAD
   background: rgba(0,0,0,0.1);
   border-top: 0;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0,0,0,0.540);
   color: #666;
   padding: 20px;
+=======
+  background: rgba(0,0,0,0.1) !important;
+  border-top: 0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 30px rgba(0,0,0,0.540) !important;
+  color: #666 !important;
+  padding: 20px !important;
+>>>>>>> servicios
 }
 
 .login-card-body .input-group .form-control,
@@ -27776,9 +27826,20 @@ blockquote.quote-gray-dark h6 {
   border-color: #1c7430;
   color: #ffffff;
 }
+<<<<<<< HEAD
 
 .bg-info {
   background-color: #17a2b8 !important;
+=======
+.bg-info-en{
+  background-color: #FE2A4A !important;
+}
+.bg-info-ag{
+  background-color: #2A50FE !important;
+}
+.bg-info {
+  background-color: #FCCF19 !important;
+>>>>>>> servicios
 }
 
 .bg-info,
@@ -30713,5 +30774,28 @@ a.text-muted:hover {
 }
 .buttonFondoModal{
   background-color: #790a0a;
+}
+.calendarGas{
+  position:relative;
+  top:0;
+  bottom:0;
+  right:0;
+  left:720px;
+
+}
+.calendarAgua{
+  position:relative;
+  top:0;
+  bottom:0;
+  right:0;
+  left:720px;
+
+}
+.calendarEnergia{
+  position:relative;
+  top:0;
+  bottom:0;
+  right:0;
+  left:720px;
 }
 /*# sourceMappingURL=adminlte.css.map */

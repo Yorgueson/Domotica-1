@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  document.getElementById('clickGas').click();
+});
+
           /*=============================================
        =            GRAFICA DEL AGUA           =
        =============================================*/
@@ -55,6 +59,7 @@
               },
               series: {
                 color: '#3c8dbc',
+                color: '#42B9FF',
                 lines: {
                   lineWidth: 2,
                   show: true,
@@ -268,6 +273,7 @@
               },
               series: {
                 color: '#E60D09',
+                color: '#FF0C08',
                 lines: {
                   lineWidth: 2,
                   show: true,
@@ -316,3 +322,47 @@
            * END INTERACTIVE CHART
            */
       });
+
+    /*=============================================
+       =            MOSTRAR INFO DEL GAS           =
+       =============================================*/
+function gas() {
+
+  document.getElementById('infoGas').style.display="block";
+  document.getElementById('infoAgua').style.display="none";
+  document.getElementById('infoEnergia').style.display="none"; 
+
+}
+
+/*=============================================
+       =       MOSTRAR INFO DE LA ENERGIA    =
+=============================================*/
+function energia() {
+
+  document.getElementById('infoGas').style.display="none";
+  document.getElementById('infoAgua').style.display="none";
+  document.getElementById('infoEnergia').style.display="block"; 
+     
+}
+/*=============================================
+  =            MOSTRAR INFO DEL AGUA           =
+=============================================*/
+function agua() {
+
+  document.getElementById('infoGas').style.display="none";
+  document.getElementById('infoAgua').style.display="block";
+  document.getElementById('infoEnergia').style.display="none"; 
+     
+}
+
+/*=============================================
+  =            IMPIRMIR CONSUMO  de ENERGIA  =
+=============================================*/
+$(".card-energia").on("click", ".btnImprimirFactura" ,function(){
+
+  var codigoEnergia = $(this).attr("codigoReporte");
+
+  window.open("extensiones/TCPDF/examples/factura.php?codigo="+codigoEnergia, "_blank");
+
+})
+
