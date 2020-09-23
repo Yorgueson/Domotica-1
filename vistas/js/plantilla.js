@@ -23,8 +23,8 @@ $(".tablas").DataTable({
         		"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
         		"sSortDescending": ": Activar para ordenar la columna de manera descendente"
         	}
-        } 
-        
+        }
+
 });
 
 $(".paginate_page").text("Página");
@@ -38,3 +38,4 @@ $('.my-colorpicker2').colorpicker()
 $('.my-colorpicker2').on('colorpickerChange', function(event) {
   $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
 });
+

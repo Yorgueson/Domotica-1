@@ -1,13 +1,14 @@
-<?php 
+<?php
 
-  session_start();
+session_start();
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
-  
+
   <meta charset="utf-8">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,9 @@
     <?php 
       echo $_GET["vista"]; 
     ?>
-    </title>
+
+  </title>
+
 
   <link rel="icon" href="images/icons/casa.png">
 
@@ -41,8 +44,13 @@
   <link rel="stylesheet" href="vistas/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="vistas/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+
   <!-- Bootstrap Color Picker -->
   <link rel="stylesheet" href="vistas/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  
+  <!-- Selected2 -->
+  <link rel="stylesheet" href="vistas/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="./css/ventanas.css">
 
 
   <!-- =============================================================
@@ -64,6 +72,17 @@
   <!-- SweetAlert2 -->
   <script src="vistas/plugins/sweetalert2/sweetalert2.min.js"></script>
 
+  <!-- jquery flot -->
+  <script src="vistas/plugins/flot/jquery.flot.js"></script>
+  <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+  <script src="vistas/plugins/flot-old/jquery.flot.resize.min.js"></script>
+  <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+  <script src="vistas/plugins/flot-old/jquery.flot.pie.min.js"></script>
+
+  <!-- Selected2 -->
+  <script src="vistas/plugins/select2/js/select2.full.min.js"></script>
+
+
   <!-- bootstrap color picker -->
   <script src="vistas/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 
@@ -76,73 +95,76 @@
 </head>
 
 <body class="hold-transition sidebar-mini">
-<!-- Site wrapper -->
+  <!-- Site wrapper -->
 
 
-<?php 
+  <?php
 
-if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
-  
-  
-  echo '<div class="wrapper">';
-
-     /*=============================================
-     =            CABEZOTE            =
-     =============================================*/
-        include "vistas/modulos/cabezote.php";
-
-     /*=============================================
-     =            MENU           =
-     =============================================*/
-        include "vistas/modulos/menu.php";
-
-     /*=============================================
-     =            CONTENIDO            =
-     =============================================*/
-        if (isset($_GET["vista"])) {
-
-            if ($_GET["vista"] == "inicio"||
-                $_GET["vista"] == "usuarios"||
-                $_GET["vista"] == "serviciosPublicos"||
-                $_GET["vista"] == "temperatura"||
-                $_GET["vista"] == "puertas"||
-                $_GET["vista"] == "ventanas"||
-                $_GET["vista"] == "salir"||
-                $_GET["vista"] == "iluminacion") {
-              
-              include 'vistas/modulos/'.$_GET["vista"].'.php';
+  if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
 
 
-            }else{
+    echo '<div class="wrapper">';
 
-              include 'vistas/modulos/404.php';
-            }
-        }
+    /*=============================================
+       =            CABEZOTE            =
+       =============================================*/
+    include "vistas/modulos/cabezote.php";
+
+    /*=============================================
+       =            MENU           =
+       =============================================*/
+    include "vistas/modulos/menu.php";
+
+    /*=============================================
+       =            CONTENIDO            =
+       =============================================*/
+    if (isset($_GET["vista"])) {
+
+      if (
+        $_GET["vista"] == "inicio" ||
+        $_GET["vista"] == "usuarios" ||
+        $_GET["vista"] == "serviciosPublicos" ||
+        $_GET["vista"] == "temperatura" ||
+        $_GET["vista"] == "puertas" ||
+        $_GET["vista"] == "ventanas" ||
+        $_GET["vista"] == "salir" ||
+        $_GET["vista"] == "iluminacion"
+      ) {
+
+        include 'vistas/modulos/' . $_GET["vista"] . '.php';
+      } else {
+
+        include 'vistas/modulos/404.php';
+      }
+    }
 
 
-     /*=============================================
-     =            FOOTER           =
-     =============================================*/
-        include "vistas/modulos/footer.php";
+    /*=============================================
+       =            FOOTER           =
+       =============================================*/
+    include "vistas/modulos/footer.php";
 
-  echo '</div>';
+    echo '</div>';
+  } else {
 
-}else{
-
-  include "vistas/modulos/login.php";
-
-}
+    include "vistas/modulos/login.php";
+  }
 
 
-?>
+  ?>
 
 
 
-<script src="./vistas/js/plantilla.js"></script>
-<script src="./vistas/js/usuario.js"></script>
 
-<script src="./vistas/js/iluminacion.js"></script>
-<!-- <script src="./vistas/js/serviciosP.js"></script> -->
+  <script src="./vistas/js/plantilla.js"></script>
+  <script src="./vistas/js/usuario.js"></script>
+  <script src="./vistas/js/iluminacion.js"></script>
+  <script src="./vistas/js/plantilla.js"></script>
+  <script src="./vistas/js/usuario.js"></script>
+  <script src="./vistas/js/ventana.js"></script>
+  <script src="./vistas/js/serviciosP.js"></script>
+
 
 </body>
+
 </html>
