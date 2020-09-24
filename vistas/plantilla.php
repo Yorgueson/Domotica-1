@@ -156,6 +156,8 @@
 <script src="vistas/js/GrafHum.js"></script>
 <script src="vistas/js/GrafTvo.js"></script>
 
+<script src="vistas/js/iluminacion.js"></script>
+
 
 
 

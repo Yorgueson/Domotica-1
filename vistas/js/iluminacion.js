@@ -37,7 +37,9 @@ $(".btnEliminarBombillo").click(function() {
 
 $(".btnEditarBombillo").click(function() {
 
-	var idBombillo = $(this).attr("idBombillo");
+    var idBombillo = $(this).attr("idBombillo");
+    
+    console.log("el id es:", idBombillo);
 
     var datos = new FormData();
 
