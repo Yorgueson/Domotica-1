@@ -148,6 +148,7 @@
 <script src="./vistas/js/plantilla.js"></script>
 <script src="./vistas/js/usuario.js"></script>
 <script src="vistas/js/temperatura.js"></script>
+<script src="vistas/js/iluminacion.js"></script>
 <script src="vistas/js/knob.js"></script>
 <script src="vistas/js/boostrapSlider.js"></script>
 
