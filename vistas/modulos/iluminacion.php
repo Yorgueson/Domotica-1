@@ -437,6 +437,140 @@
 </div>
 
 <!--================================
+    MODAL REVISAR BOMBILLO
+  =================================-->
+
+  <div class="modal fade" id="modalRevisarBombillo">
+
+<div class="modal-dialog">
+
+  <div class="modal-content">
+
+    <!--================================
+        CABEZA DEL MODAL
+      =================================-->
+
+    <div class="modal-header"  style="background: #ff851b; color: white">
+
+      <h4 class="modal-title">Revisar Bombillo</h4>
+
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+        <span aria-hidden="true">&times;</span>
+
+      </button>
+
+    </div>
+
+    <!--================================
+        CUERPO DEL MODAL
+      =================================-->
+
+    <div class="modal-body">
+
+      <div class="box-body">
+
+        <!-- ENTREDA PARA EL NOMBRE -->
+
+        <div class="card card-primary card-outline">
+
+          <div class="card-header">
+
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Consumo de bombillo
+            </h3>
+
+            <div class="card-tools">
+              Tiempo Real
+              <div class="btn-group" id="realtime" data-toggle="btn-toggle">
+
+                <button type="button" class="btn btn-default btn-sm active" data-toggle="on">On</button>
+                <button type="button" class="btn btn-default btn-sm" data-toggle="off">Off</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="card-body">
+
+            <div id="interactive" style="height: 200px;"></div>
+
+          </div>
+          <!-- /.card-body-->
+        </div>
+
+        <div class="callout callout-success">
+
+          <h5>Estado general del bombillo</h5>
+
+          <p>Bueno.</p>
+
+        </div>
+
+        <div class="col-md-12">
+
+          <div class="card">
+
+            <div class="card-header">
+
+              <h3 class="card-title">
+
+                <i class="fas fa-lightbulb"></i>
+                Detalles:
+
+              </h3>
+
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+
+              <dl class="row">
+
+                <dt class="col-sm-4">Ubicacíon</dt>
+                <dd class="col-sm-8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
+                <dt class="col-sm-4">Consumo</dt>
+                <dd class="col-sm-8">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                <dd class="col-sm-8 offset-sm-4">Donec id elit non mi porta gravida at eget metus.</dd>
+                <dt class="col-sm-4">Tiempo encendido</dt>
+                <dd class="col-sm-8">Etiam porta sem malesuada magna mollis euismod.</dd>
+                <dt class="col-sm-4">Comparacion</dt>
+                <dd class="col-sm-8">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                  sit amet risus.
+                </dd>
+
+              </dl>
+              
+            </div>
+            <!-- /.card-body -->
+          </div>
+        <!-- /.card -->
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--================================
+        FOOTER DEL MODAL
+      =================================-->
+
+    <div class="modal-footer justify-content-between">
+
+      <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+
+    </div>
+
+  </div>
+<!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!--================================
     MODAL EDITAR BOMBILLO
   =================================-->
 
