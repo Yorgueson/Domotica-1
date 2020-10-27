@@ -496,7 +496,9 @@
 
           <div class="card-body">
 
-            <div id="interactive" style="height: 200px;"></div>
+            <div class="chart-container" style="position: relative;">
+              <canvas id="GrafTvo" class="chartjs-render-monitor"></canvas>
+            </div>
 
           </div>
           <!-- /.card-body-->
@@ -667,4 +669,59 @@
 
    $borrarBombillo -> ctrBorrarBombillo();
 
+   $labelsHora=array();
+   $estados=array();
+
+  $tabla="estadisticas";
+
+  $respuestaIluminacion= ControladorIluminacion::ctrHistoricoIluminacion($tabla);
+  
+  foreach($respuestaIluminacion as $key => $value){
+    array_push($estados, $value["Estado"]);
+    $hora_iluminacion=substr($value["fecha"],11,5);
+    array_push($labelsHora, $hora_iluminacion);
+  }
+
+  echo (" weeeee aca estoy");
 ?>
+
+<script>
+//--------  Grafico de Temperatura --------------
+    var ctxT =$("#GrafTvo").get(0).getContext('2d');
+    var chart = new Chart(ctxT, {
+      type: 'bar',
+      data: {
+        labels: [
+        <?php
+            foreach($labelsHora as $value){
+              echo "'".$value."',";
+            }
+          ?>
+        ],          
+        datasets: [{
+          label: 'Encendido',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          data: [
+            <?php
+              foreach($estados as $key => $value){
+                echo $value.",";
+              }
+            ?>
+          ]
+        }]
+      },
+
+      // Configuration options go here
+      options: {
+        responsive: true,
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems, data){
+              return tooltipItems.yLabel + '';
+            }
+          }
+        }
+      }
+    });
+</script>

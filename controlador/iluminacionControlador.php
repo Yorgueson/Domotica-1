@@ -199,4 +199,11 @@ class ControladorIluminacion{
 
     }
 
+    static public function ctrHistoricoIluminacion($tabla){         
+
+         $respuesta = ModeloIluminacion::mdlHistoricoIluminacion($tabla);
+
+         return $respuesta;
+    }
+
 }
