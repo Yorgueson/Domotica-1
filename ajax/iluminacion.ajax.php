@@ -24,6 +24,29 @@ class AjaxIluminacion{
 
     }
 
+   /*==============================
+      ENCENDER/APAGAR BOMBILLO 
+    =============================*/
+
+    public $activarBombillo;
+
+    public $activarId;
+
+    public function ajaxActivarBombillo()
+	{
+
+		$tabla = "iluminacion";
+
+        $item1 = "encendido";
+		$valor1 = $this->activarBombillo;
+
+		$item2 = "id_bombillo";
+		$valor2 = $this->activarId;
+
+		$respuesta = ModeloIluminacion::mdlActualizarBombillo($tabla, $item1, $valor1, $item2, $valor2);
+
+	}
+
 }
 
 /*=================================================
@@ -39,3 +62,19 @@ if (isset($_POST["idBombillo"])) {
     $bombillo->ajaxEditarBombillo();
     
 }
+
+/*==============================
+    ACTIVAR BOMBILLO
+=============================*/
+
+    if (isset($_POST["activarBombillo"])) {
+	
+        $activarBombillo = new AjaxIluminacion();
+    
+        $activarBombillo -> activarBombillo = $_POST["activarBombillo"];
+    
+        $activarBombillo -> activarId = $_POST["activarId"];
+    
+        $activarBombillo -> ajaxActivarBombillo();
+    
+    }

@@ -434,42 +434,69 @@ $(function () {
   /*==============================
       ENCENDER/APAGAR BOMBILLO 
   =============================*/
+
+    $(".btnEncender").click(function(){
+
+      var idBombillo = $(this).attr("idBombillo");
   
-  $("#btnOnOff").click(function(){
-  
-    var estadoBombillo = $(this).attr("estadoBombillo");
-  
-    if (estadoBombillo == 1) {
-  
+      var encendidoBombillo = $(this).attr("estadoBombillo");
+
       Swal.fire({
-  
+
         icon: "warning",
-        title: "¿Esta seguro que desea apagar el bombillo?",
-        text: "¡Si no lo esta puede cancelar la accion!",
+        title: "¿Esta seguro de esta accion?",
+        text: "¡Si no lo esta puede cancelar la acción!",
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         cancelButtonText: 'Cancelar',
-        confirmButtonText: 'Si, ¡Dejar de hacerlo!'
+        confirmButtonText: 'Si!'
     
-      }).then((result) => {
+      }).then(function(result){
+        
+        if (result.value) {
+          
+          var datos = new FormData();
   
-        $(this).removeClass('btn-outline-primary');
-    
-        $(this).addClass('btn-outline-danger');
-  
-        $(this).attr('estadoBombillo', 0);
-  
+          datos.append("activarId", idBombillo);
+      
+          datos.append("activarBombillo", encendidoBombillo);
+      
+          $.ajax({
+      
+              url: "ajax/iluminacion.ajax.php",
+              method: "POST",
+              data: datos,
+              cache: false,
+              contentType: false,
+              processData: false,
+      
+              success: function(respuesta){
+
+                window.location = "iluminacion";
+      
+              }
+      
+          })
+          
+        }
+        
       })
   
-    } else {
+      
   
-      $(this).removeClass('btn-outline-danger');
-    
-      $(this).addClass('btn-outline-success');
+      if (estadoBombillo == 0) {
   
-      $(this).attr('estadoBombillo', 1);
+          $(this).removeClass('btn-outline-primary');
+          $(this).addClass('btn-outline-danger');
+          $(this).attr('estadoBombillo', 1);
+  
+      } else {
+  
+          $(this).addClass('btn-outline-primary');
+          $(this).removeClass('btn-outline-danger');
+          $(this).attr('estadoBombillo', 0);
   
     }
-      
+  
   })
