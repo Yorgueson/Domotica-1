@@ -106,7 +106,7 @@ if (isset($_POST["idBombillo"])) {
     INTENSIDAD BOMBILLO
 =============================*/
 
-if (isset($_POST["idBombillo"])) {
+if (isset($_POST["intensidad"])) {
 	
     $intensidadBombillo = new AjaxIluminacion();
 
