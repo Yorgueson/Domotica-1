@@ -71,68 +71,38 @@
                 
                 <div class="row">
 
-                  <!-- Tarjeta ver informe -->
-
-                  <div class="col-lg-6 col-6">
-
-                    <div class="small-box bg-info">
-
-                      <div class="inner">
-
-                        <h3>Ver Informe</h3>
-
-                        <p>General</p>
-
-                      </div>
-
-                      <div class="icon">
-
-                        <i class="far fa-eye"></i>
-
-                      </div>
-
-                      <a href="informegeneral" class="small-box-footer">
-
-                        Ver
-
-                        <i class="fas fa-arrow-circle-right"></i>
-
-                      </a>
-
-                    </div>
-
-                  </div>
-
                   <!-- Tarjeta agregar -->
+                  <div style="position: relative;  left:250px"
+                    <div class="col-lg-6 col-6">
 
-                  <div class="col-lg-6 col-6">
+                      <div class="small-box bg-success">
 
-                    <div class="small-box bg-success">
+                        <div class="inner">
 
-                      <div class="inner">
+                          <h3>Agregar</h3>
 
-                        <h3>Agregar</h3>
+                          <p>Bombillos</p>
 
-                        <p>Bombillos</p>
+                        </div>
+
+                        <div class="icon">
+
+                          <i class="far fa-plus-square"></i>
+
+                        </div>
+
+                        <a class="small-box-footer" id="btnAgregar" data-toggle="modal" data-target="#modalAgregarBombillo">
+
+                          Agregar
+
+                          <i class="fas fa-arrow-circle-right"></i>
+
+                        </a>
 
                       </div>
-
-                      <div class="icon">
-
-                        <i class="far fa-plus-square"></i>
-
-                      </div>
-
-                      <a class="small-box-footer" id="btnAgregar" data-toggle="modal" data-target="#modalAgregarBombillo">
-
-                        Agregar
-
-                        <i class="fas fa-arrow-circle-right"></i>
-
-                      </a>
+                      
 
                     </div>
-
                   </div>
 
                 </div>
@@ -653,7 +623,7 @@
     array_push($labelsHora, $hora_iluminacion);
   }
 
-  echo (" weeeee aca estoy");
+ 
 ?>
 
 <script>
