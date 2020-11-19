@@ -173,17 +173,12 @@
 
                       echo '
                         
-                        <button class="btn btn-outline-success btnMonitorear">
-                          <i class="fa fa-book"></i>
-                        </button>
+
 
                         <button class="btn btn-outline-info" data-toggle="modal" data-target="#modalRevisarBombillo">
                           <i class="fas fa-eye"></i>
                         </button>
 
-                        <button class="btn btn-outline-secondary">
-                          <i class="fab fa-cuttlefish"></i>
-                        </button>
 
                         <button class="btn btn-default">
                           <input type="range" class="custom-range" id="customRange1" style="width: 300px">
