@@ -216,7 +216,7 @@
                         </button>
 
                         <button class="btn btn-default">
-                          <input type="range" class="custom-range" id="customRange1" style="width: 300px">
+                          <input type="range" class="custom-range btnIntensidad" id="customRange1" idBombillo="'.$value["id_bombillo"].'" min="1" max="10" step="1" style="width: 300px">
                         </button>
 
                         <button class="btn btn-outline-warning btnEditarBombillo" idBombillo="'.$value["id_bombillo"].'" data-toggle="modal" data-target="#modalEditarBombillo">
