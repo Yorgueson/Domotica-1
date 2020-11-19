@@ -203,16 +203,13 @@
 
                       echo '
                         
-
-
                         <button class="btn btn-outline-info" data-toggle="modal" data-target="#modalRevisarBombillo">
                           <i class="fas fa-eye"></i>
                         </button>
 
-
-                        <button class="btn btn-default">
-                          <input type="range" class="custom-range btnIntensidad" id="customRange1" idBombillo="'.$value["id_bombillo"].'" min="1" max="10" step="1" style="width: 300px">
-                        </button>
+                        <label for="rangeInput" id="labelRange">'.$value["intensidad"].'</label>
+                        
+                        <input type="range" id="rangeInputIntensidad" name="rangeInput" min="0" max="10" step="1" onchange="actualizarIntensidad(this.value, '.$value["id_bombillo"].');">
 
                         <button class="btn btn-outline-warning btnEditarBombillo" idBombillo="'.$value["id_bombillo"].'" data-toggle="modal" data-target="#modalEditarBombillo">
                           <i class="fas fa-pencil-alt"></i>
@@ -232,8 +229,6 @@
                   }
 
                 ?>
-
-                
 
               </tbody>
 

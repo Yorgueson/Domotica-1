@@ -483,8 +483,6 @@ $(function () {
         
       })
   
-      
-  
       if (estadoBombillo == 0) {
   
           $(this).removeClass('btn-outline-primary');
@@ -500,3 +498,38 @@ $(function () {
     }
   
   })
+
+function actualizarIntensidad(val, idBombillo) {
+
+  var idBombillo = idBombillo;
+
+  var intensidad = val;
+
+  console.log("Intensidad", intensidad);
+
+  console.log("idBombillo", idBombillo);
+
+  var datos = new FormData();
+
+  datos.append("idBombillo", idBombillo);
+
+  datos.append("intensidad", intensidad);
+
+  $.ajax({
+
+      url: "ajax/iluminacion.ajax.php",
+      method: "POST",
+      data: datos,
+      cache: false,
+      contentType: false,
+      processData: false,
+
+      success: function(respuesta){
+
+        window.location = "iluminacion";
+
+      }
+
+  })
+
+}

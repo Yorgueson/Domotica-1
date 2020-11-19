@@ -45,6 +45,29 @@ class AjaxIluminacion{
 
 		$respuesta = ModeloIluminacion::mdlActualizarBombillo($tabla, $item1, $valor1, $item2, $valor2);
 
+    }
+    
+    /*==============================
+      INTENSIDAD BOMBILLO 
+    =============================*/
+
+    public $idBombilloIntensidad;
+
+    public $intensidad;
+
+    public function ajaxIntensidadBombillo()
+	{
+
+		$tabla = "iluminacion";
+
+        $item1 = "intensidad";
+		$valor1 = $this->intensidad;
+
+		$item2 = "id_bombillo";
+		$valor2 = $this->idBombilloIntensidad;
+
+		$respuesta = ModeloIluminacion::mdlActualizarBombillo($tabla, $item1, $valor1, $item2, $valor2);
+
 	}
 
 }
@@ -78,3 +101,19 @@ if (isset($_POST["idBombillo"])) {
         $activarBombillo -> ajaxActivarBombillo();
     
     }
+
+    /*==============================
+    INTENSIDAD BOMBILLO
+=============================*/
+
+if (isset($_POST["idBombillo"])) {
+	
+    $intensidadBombillo = new AjaxIluminacion();
+
+    $intensidadBombillo -> intensidad = $_POST["intensidad"];
+
+    $intensidadBombillo -> idBombilloIntensidad = $_POST["idBombillo"];
+
+    $intensidadBombillo -> ajaxIntensidadBombillo();
+
+}
